@@ -36,7 +36,7 @@
                                                                             <h4>Web Designer</h4>
                                                                         </div>
                                                                     </div>
-                                                                    <h1>Alex Smith</h1>
+                                                                    <h1>Iman Shafiei Alavijeh</h1>
                                                                     <p>Fusce tempor magna mi, non egestas velit
                                                                         ultricies nec. Aenean convallis, risus
                                                                         non condimentum gravida, odio mauris
