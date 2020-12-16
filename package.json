@@ -1,0 +1,23 @@
+{
+  "name": "imanshafiei",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "start": "nuxt start",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.11.1",
+    "@popperjs/core": "^2.5.4",
+    "bootstrap": "^5.0.0-beta1",
+    "bootstrap-vue": "^2.20.1",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
