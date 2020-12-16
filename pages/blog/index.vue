@@ -3,30 +3,21 @@
         <div class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div v-for="post in posts.slice(0,2)" :key="post.slug" class="col-md-6">
                         <div class="post post-thumb">
-                            <a class="post-img" href="blog-post.html"><img src="/img/post-1.jpg" alt=""></a>
+                            <b-link class="post-img" :to="{name: 'blog-post-slug', params: {slug: post.slug}}">
+                                <img :src="post.image" :alt="post.slug">
+                            </b-link>
                             <div class="post-body">
                                 <div class="post-meta">
-                                    <a class="post-category cat-2" href="category.html">JavaScript</a>
-                                    <span class="post-date">March 27, 2018</span>
+                                    <b-link class="post-category cat-2" href="category.html">{{ post.category_name }}
+                                    </b-link>
+                                    <span class="post-date">{{ post.date }}</span>
                                 </div>
-                                <h3 class="post-title"><a href="blog-post.html">Chrome Extension Protects Against
-                                        JavaScript-Based CPU Side-Channel Attacks</a></h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="post post-thumb">
-                            <a class="post-img" href="blog-post.html"><img src="/img/post-2.jpg" alt=""></a>
-                            <div class="post-body">
-                                <div class="post-meta">
-                                    <a class="post-category cat-3" href="category.html">Jquery</a>
-                                    <span class="post-date">March 27, 2018</span>
-                                </div>
-                                <h3 class="post-title"><a href="blog-post.html">Ask HN: Does Anybody Still Use
-                                        JQuery?</a></h3>
+                                <h3 class="post-title">
+                                    <b-link :to="{name: 'blog-post-slug', params: {slug: post.slug}}">{{ post.title }}
+                                    </b-link>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -43,74 +34,25 @@
                                     <h2>Most Read</h2>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div v-for="post in posts" :key="post.slug" class="col-md-12">
                                 <div class="post post-row">
-                                    <a class="post-img" href="blog-post.html"><img src="/img/post-4.jpg" alt=""></a>
+                                    <a class="post-img" href="blog-post.html"><img :src="post.image" alt=""></a>
                                     <div class="post-body">
                                         <div class="post-meta">
-                                            <a class="post-category cat-2" href="category.html">JavaScript</a>
-                                            <span class="post-date">March 27, 2018</span>
+                                            <a class="post-category cat-2"
+                                                href="category.html">{{ post.category_name }}</a>
+                                            <span class="post-date">{{ post.date }}</span>
                                         </div>
-                                        <h3 class="post-title"><a href="blog-post.html">Chrome Extension Protects
-                                                Against JavaScript-Based CPU Side-Channel Attacks</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam...</p>
+                                        <h3 class="post-title"><a href="blog-post.html">{{ post.title }}</a></h3>
+                                        <p>{{ post.short_description }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="post post-row">
-                                    <a class="post-img" href="blog-post.html"><img src="/img/post-6.jpg" alt=""></a>
-                                    <div class="post-body">
-                                        <div class="post-meta">
-                                            <a class="post-category cat-2" href="category.html">JavaScript</a>
-                                            <span class="post-date">March 27, 2018</span>
-                                        </div>
-                                        <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid
-                                                On The Backend Development Block!</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam...</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="post post-row">
-                                    <a class="post-img" href="blog-post.html"><img src="/img/post-1.jpg" alt=""></a>
-                                    <div class="post-body">
-                                        <div class="post-meta">
-                                            <a class="post-category cat-4" href="category.html">Css</a>
-                                            <span class="post-date">March 27, 2018</span>
-                                        </div>
-                                        <h3 class="post-title"><a href="blog-post.html">CSS Float: A Tutorial</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam...</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="post post-row">
-                                    <a class="post-img" href="blog-post.html"><img src="/img/post-2.jpg" alt=""></a>
-                                    <div class="post-body">
-                                        <div class="post-meta">
-                                            <a class="post-category cat-3" href="category.html">Jquery</a>
-                                            <span class="post-date">March 27, 2018</span>
-                                        </div>
-                                        <h3 class="post-title"><a href="blog-post.html">Ask HN: Does Anybody Still Use
-                                                JQuery?</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam...</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <div class="section-row">
                                     <button class="primary-button center-block">Load More</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -147,15 +89,20 @@
         layout: 'blog',
         data() {
             return {
-                tags: []
+                tags: [],
+                posts: []
             }
         },
         beforeMount() {
             this.get_tags()
+            this.get_posts()
         },
         methods: {
             async get_tags() {
                 this.tags = await this.$content('tags').sortBy('name').fetch()
+            },
+            async get_posts() {
+                this.posts = await this.$content('posts').fetch()
             }
         }
     }

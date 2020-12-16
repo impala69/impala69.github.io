@@ -27,9 +27,7 @@
                             </div>
                             <div class="footer-copyright">
                                 <span>&copy; </span>
-                                Copyright &copy; All rights reserved | This template is made with <i
-                                    class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/"
-                                    target="_blank">Colorlib</a>
+                                Copyright &copy; All rights reserved
                             </div>
                         </div>
                     </div>
@@ -50,10 +48,9 @@
                                 <div class="footer-widget">
                                     <h3 class="footer-title">Catagories</h3>
                                     <ul class="footer-links">
-                                        <li><a href="category.html">Web Design</a></li>
-                                        <li><a href="category.html">JavaScript</a></li>
-                                        <li><a href="category.html">Css</a></li>
-                                        <li><a href="category.html">Jquery</a></li>
+                                        <li v-for="category in categories" :key="category.slug">
+                                            <b-link :to="{name: ''}">{{ category.name }}</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

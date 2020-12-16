@@ -7,10 +7,10 @@
                     <div class="row">
                         <div class="col-md-10">
                             <div class="post-meta">
-                                <a class="post-category cat-2" href="category.html">JavaScript</a>
-                                <span class="post-date">March 27, 2018</span>
+                                <a class="post-category cat-2" href="category.html">{{ post.category_name }}</a>
+                                <span class="post-date">{{ post.date }}</span>
                             </div>
-                            <h1>Ask HN: Does Anybody Still Use JQuery?</h1>
+                            <h1>{{ post.title }}</h1>
                         </div>
                     </div>
                 </div>
@@ -106,8 +106,8 @@
         },
         methods: {
             async get_post_by_slug() {
-                this.post = await this.$content('posts/' + this.post_slug + '/data').fetch()
-                this.post_description = await this.$content('posts/' + this.post_slug + '/description').fetch()
+                this.post = await this.$content('posts/' + this.post_slug).fetch()
+                this.post_description = await this.$content(this.post.description_link).fetch()
             }
         }
     }
