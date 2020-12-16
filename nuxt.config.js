@@ -60,7 +60,7 @@ export default {
             'ModalPlugin',
         ],
         components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BModal', 'BImgLazy', 'BNavbar', 'BNavbarNav', 'BNavbarBrand',
-            'BNavItem', 'BNavbarToggle', 'BNav', 'BNavText', 'BCollapse'
+            'BNavItem', 'BNavbarToggle', 'BNav', 'BNavText', 'BCollapse', 'BIconPen', 'BLink'
         ],
         directives: ['VBModal', 'VBToggle'],
     },

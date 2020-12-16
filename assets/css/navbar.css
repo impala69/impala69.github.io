@@ -5114,7 +5114,7 @@ a.post-thumbnail:hover {
     min-width: 100%;
     min-height: 100%;
     width: 100%;
-    padding: 52px 40px 60px;
+    padding: 1rem 1.3rem;
   }
 
   .page-title {
